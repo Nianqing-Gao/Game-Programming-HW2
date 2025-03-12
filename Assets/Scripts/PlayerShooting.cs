@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerShooting : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class PlayerShooting : MonoBehaviour
     //     }
     // }
 
-    public void OnFire()
+    public void OnFire(InputValue value)
     {
         if (value.isPressed)
         {
