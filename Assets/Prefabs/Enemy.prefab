@@ -107,6 +107,7 @@ MonoBehaviour:
   lastShootTime: 0
   bulletPrefab: {fileID: 0}
   fireRate: 0
+  muzzleEffect: {fileID: 0}
 --- !u!1 &5359585170000527900
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,6 +234,7 @@ GameObject:
   - component: {fileID: 3922967979856733889}
   - component: {fileID: -7264819126911687248}
   - component: {fileID: 1392365821383071966}
+  - component: {fileID: 1647190478648563315}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
@@ -459,6 +461,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particlePrefab: {fileID: 1840810253214748733, guid: 2e52b895b775c4408a94440a8240090b,
     type: 3}
+--- !u!114 &1647190478648563315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5869019778950863054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e858aaafedc74f578fc182f2ec7f31c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerObject: {fileID: 0}
+  maxDistance: 5
 --- !u!1001 &109605638649682740
 PrefabInstance:
   m_ObjectHideFlags: 0
