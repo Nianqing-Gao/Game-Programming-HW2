@@ -3154,6 +3154,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1109201103}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &152601001 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5135048175821747780, guid: f2db1e83eaa014cef857e1e1f6070ce5,
+    type: 3}
+  m_PrefabInstance: {fileID: 257519207}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f6e48be65fa94a338a72b40698a1bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &158465178
 GameObject:
   m_ObjectHideFlags: 0
@@ -3880,6 +3892,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4756093214794884195, guid: f2db1e83eaa014cef857e1e1f6070ce5,
+        type: 3}
+      propertyPath: sightSensor
+      value: 
+      objectReference: {fileID: 152601001}
+    - target: {fileID: 4756093214794884195, guid: f2db1e83eaa014cef857e1e1f6070ce5,
+        type: 3}
+      propertyPath: baseTransform
+      value: 
+      objectReference: {fileID: 2109978311}
     - target: {fileID: 5869019778950863054, guid: f2db1e83eaa014cef857e1e1f6070ce5,
         type: 3}
       propertyPath: m_Name
@@ -3930,7 +3952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e858aaafedc74f578fc182f2ec7f31c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerObject: {fileID: 257519208}
+  target: {fileID: 257519208}
   maxDistance: 500
 --- !u!1 &267329731
 GameObject:
@@ -21976,6 +21998,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5317505444459155352, guid: 34c5745124b684beab0bd8db9dfa134c,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 342807421}
     - target: {fileID: 5317505444459155352, guid: 34c5745124b684beab0bd8db9dfa134c,
         type: 3}
       propertyPath: maxDistance
