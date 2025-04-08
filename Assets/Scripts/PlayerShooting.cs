@@ -8,6 +8,10 @@ public class PlayerShooting : MonoBehaviour
     public GameObject prefab;
     public GameObject shootPoint;
     public ParticleSystem muzzleEffect;
+    public AudioSource shootSound;
+    public int bulletAmount;
+    public float fireRate;
+    Animator animator;
 
     void Start()
     {
@@ -21,14 +25,40 @@ public class PlayerShooting : MonoBehaviour
     //     }
     // }
 
-    public void OnFire(InputValue value)
-    {
-        if (value.isPressed)
-        {
+    // public void OnFire(InputValue value)
+    // {
+    //     if (value.isPressed && bulletAmount > 0 && Time.timeScale > 0)
+    //     {
+    //         bulletAmount--;
+    //         GameObject clone = Instantiate(prefab);
+    //         clone.transform.position = shootPoint.transform.position;
+    //         clone.transform.rotation = shootPoint.transform.rotation;
+    //         muzzleEffect.Play();
+    //         shootSound.Play();
+    //     }
+    // }
+
+    private void Awake() {
+        animator = GetComponent<Animator>();
+    }
+
+    public void OnFire(InputValue value) {
+        animator.SetBool("Shooting", value.isPressed);
+        if (value.isPressed) {
+            InvokeRepeating("Shoot", fireRate, fireRate);
+        } else {
+            CancelInvoke();
+        }
+    }
+
+    private void Shoot() {
+        if (bulletAmount > 0 && Time.timeScale > 0) {
+            bulletAmount--;
             GameObject clone = Instantiate(prefab);
             clone.transform.position = shootPoint.transform.position;
             clone.transform.rotation = shootPoint.transform.rotation;
             muzzleEffect.Play();
+            shootSound.Play();
         }
     }
 }
